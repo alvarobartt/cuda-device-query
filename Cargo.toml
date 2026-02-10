@@ -1,0 +1,16 @@
+[package]
+name = "cuda-device-query"
+version = "0.1.0"
+edition = "2024"
+description = "CUDA `deviceQuery.cpp` port written in Rust with `cudarc`"
+repository = "https://github.com/alvarobartt/gort"
+license = "MIT"
+readme = "README.md"
+authors = ["Alvaro Bartolome <alvarobartt@gmail.com>"]
+
+[[bin]]
+name = "cuda-device-query"
+path = "src/main.rs"
+
+[dependencies]
+cudarc = { version = "0.19", default-features = false, features = ["driver", "dynamic-linking", "cuda-version-from-build-system"] }
